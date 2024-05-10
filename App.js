@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Gallery from './Gallery';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.headerWrapper}>
+        <Text style={styles.sectionTitle}>Recipe Gallery</Text>
+      </View>
+
+      <Gallery />
     </View>
   );
 }
@@ -13,8 +17,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#E8EAED',
+  },
+  headerWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+  },
+  sectionTitle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "black"
   },
 });
